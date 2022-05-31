@@ -17,9 +17,7 @@ const TestSubmit = ( {message,round}) => {
   }
 
   return (
-      <>
-    
-     
+      <> 
       {showModal ? (
         <div className="mt-48 ml-96  flex justify-center items-center flex-col w-72 h-64 rounded-lg border-2 bg-black border-slate-800 shadow-xl h-auto p-2">
           <Image src={correct} width={100} height={100} objectFit="contain" />
@@ -37,9 +35,6 @@ const TestSubmit = ( {message,round}) => {
         
       ) : null}
       </>
-
-     
-    
   );
 };
 

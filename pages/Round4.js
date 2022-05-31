@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { database as db } from '../firebase/firebase';
 import TestModals from "../components/TestModals";
-import useFirebaseRef from '../utils/useFirebaseRef';
+import FirebaseRef from '../utils/FirebaseRef';
 import { ref, update } from 'firebase/database';
 import TestSubmit from '../components/TestSubmit';
 //import Buttonhint from "../components/Buttonhint";
-
+//import img from "next/img";
 
 export default function Round4Page() {
   const router=useRouter();
@@ -17,22 +17,19 @@ export default function Round4Page() {
     const id='agenda-4';
    const [value1, setValue1] = useState('');
    const [value2, setValue2] = useState('');
-   const agendasref=useFirebaseRef(`agendas`);
-   const scoreref=useFirebaseRef('Scores/score');
-   const attemptref=useFirebaseRef('Attempt/attempts');
-   const hint=useFirebaseRef('agendas/agenda-4/hint')
+   const agendasref=FirebaseRef(`agendas`);
+   const scoreref=FirebaseRef('Scores/score');
+   const attemptref=FirebaseRef('Attempt/attempts');
+   const hint=FirebaseRef('agendas/agenda-4/hint')
    const [success,setsuccess]= useState(false);
    const [hintval,sethintval]=useState(" ");
    //const [agenda,setagenda]=useState('');  
    //const [wrngans,setwrngans]=useState(false);
-
-
-const showhint=()=>{    
-    const valhint=val;
-    const ragenda=agendasref;
-     alert(ragenda[id].hint)
-  }
-
+// const showhint=()=>{    
+//     const valhint=val;
+//     const ragenda=agendasref;
+//      alert(ragenda[id].hint)
+//   }
 
   const check= ()=> {
     const checkarr=agendasref[id].keywords
@@ -79,9 +76,9 @@ const showhint=()=>{
           <a href="#" className="inline-flex flex-row items-center">
             <svg className="w-10 h-10 text-red-400" fill="currentColor" viewBox="0 0 20 20">
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M11.757 2.034a1 1 0 01.638.519c.483.967.844 1.554 1.207 2.03.368.482.756.876 1.348 1.467A6.985 6.985 0 0117 11a7.002 7.002 0 01-14 0c0-1.79.684-3.583 2.05-4.95a1 1 0 011.707.707c0 1.12.07 1.973.398 2.654.18.374.461.74.945 1.067.116-1.061.328-2.354.614-3.58.225-.966.505-1.93.839-2.734.167-.403.356-.785.57-1.116.208-.322.476-.649.822-.88a1 1 0 01.812-.134zm.364 13.087A2.998 2.998 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879.586.585.879 1.353.879 2.121s-.293 1.536-.879 2.121z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
             <span className="leading-10 text-gray-100 text-2xl font-bold ml-1 uppercase">80-20 GAME</span>
@@ -98,9 +95,9 @@ const showhint=()=>{
               <span className="flex items-center justify-center text-bold text-lg text-white-400">
                 <svg
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="h-6 w-6"
@@ -119,15 +116,15 @@ const showhint=()=>{
 
           <li className="my-px">
             <a
-              href="countrypolitics"
+              href="Countrypolitics"
               className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
             >
               <span className="flex items-center justify-center text-lg text-white-400">
                 <svg
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="h-6 w-6"
@@ -143,15 +140,15 @@ const showhint=()=>{
 
           <li className="my-px">
             <a
-              href="country_gdp"
+              href="Country_gdp"
               className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
             >
               <span className="flex items-center justify-center text-lg text-white-400">
                 <svg
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="h-6 w-6"
@@ -167,15 +164,15 @@ const showhint=()=>{
 
           <li className="my-px">
             <a
-              href="country_pop"
+              href="Country_pop"
               className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
             >
               <span className="flex items-center justify-center text-lg text-white-400">
                 <svg
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="h-6 w-6"
@@ -195,15 +192,15 @@ const showhint=()=>{
 
           <li className="my-px">
             <a
-              href="un"
+              href="Un"
               className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
             >
               <span className="flex items-center justify-center text-lg text-white-400">
                 <svg
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="h-6 w-6"
@@ -217,15 +214,15 @@ const showhint=()=>{
 
           <li className="my-px">
             <a
-              href="foreign"
+              href="Foreign"
               className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
             >
               <span className="flex items-center justify-center text-lg text-white-400">
                 <svg
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="h-6 w-6"
@@ -247,17 +244,17 @@ const showhint=()=>{
             <span className="flex font-medium text-sm text-white-600 px-4 my-4 uppercase">SPORTS</span>
           </li>
 
-          <li className="my-px">
+          {/* <li className="my-px">
             <a
-              href="addnewdata"
+              href="Addnewdata"
               className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
             >
               <span className="flex items-center justify-center text-lg text-green-400">
                 <svg
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="h-6 w-6"
@@ -267,7 +264,7 @@ const showhint=()=>{
               </span>
               <span className="ml-3">Add New Data</span>
             </a>
-          </li>
+          </li> */}
 
           <li className="my-px">
             <a
@@ -277,9 +274,9 @@ const showhint=()=>{
               <span className="flex items-center justify-center text-lg text-red-400">
                 <svg
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="h-6 w-6"
@@ -306,7 +303,7 @@ const showhint=()=>{
       {/*agenda section -url-  https://thumbs.dreamstime.com/b/rule-concept-pareto-principle-business-145556108.jpg*/}
     
         <div className="bg-gray-50 flex flex-col pattern-isometric flex-grow border-4 border-white border-solid bg-white rounded mt-6 mx-20">  
-        <div class= " bg-black text-white  px-5 py-2 text-gray-50 text-2xl font-bold text-center">
+        <div className= " bg-black text-white  px-5 py-2 text-gray-50 text-2xl font-bold text-center">
               <h1 >AGENDA : {id}</h1>
         </div><br></br><br></br>
               <h1 className="font-bold text-2xl  text-center text-slate-900">20% of
@@ -314,7 +311,7 @@ const showhint=()=>{
               <br></br><div className="mb-3 xl:w-96 px-3 py-1.5">
               <select  value = {value1}
               onChange= {(e)=>{setValue1(e.target.value)}}
-              class="dropdown-toggle w-full px-3 py-1.5 inline-block px-6 py-2 bg-slate-500 
+              className="dropdown-toggle w-full px-3 py-1.5 inline-block px-6 py-2 bg-slate-500 
                      text-white font-small text-xl leading-tight  
                      rounded shadow-md 
                      hover:bg-slate-900 
@@ -333,7 +330,7 @@ const showhint=()=>{
           focusable="false"
           data-prefix="fas"
           data-icon="caret-down"
-          class="w-2 ml-2"
+          className="w-2 ml-2"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 320 512"
@@ -358,7 +355,7 @@ const showhint=()=>{
      onChange= { (e) => {
        setValue2(e.target.value);
      }} 
-     class="dropdown-toggle w-full px-5 py-1.5 inline-block px-6 py-2 bg-slate-500 
+     className="dropdown-toggle w-full px-5 py-1.5 inline-block px-6 py-2 bg-slate-500 
     text-white 
     font-small
     text-xl 
@@ -389,7 +386,7 @@ const showhint=()=>{
           focusable="false"
           data-prefix="fas"
           data-icon="caret-down"
-          class="w-2 ml-2"
+          className="w-2 ml-2"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 320 512"
@@ -401,7 +398,7 @@ const showhint=()=>{
         </svg>
         <option selected >ChooseKeyword</option>
         <option value="one">Population</option>
-        <option value="two">Country's GDP</option>
+        <option value="two">Countrys GDP</option>
         <option value="three">three</option>
         <option value="four">four</option>
         <option value="five">five</option>

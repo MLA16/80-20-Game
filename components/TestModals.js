@@ -7,7 +7,6 @@ import Gift from "../public/gift.png";
 
 const TestModals = ( {message}) => {
   const [showModal, setShowModal] = useState(false);
- 
   //const [hintval,sethintval]=useState("")
   
 const clicksubmit =()=>{
@@ -27,11 +26,10 @@ const clicksubmit =()=>{
       </div>
 
       {showModal ? (
-        <div className="mt-10 flex place-items-center  items-center flex-col w-72 rounded-lg border-4 bg-slate-400 border-blue-800 shadow-xl h-auto p-2">
+        <div className="mt-10 flex justify-center items-center flex-col w-72 rounded-lg border-4 bg-slate-400 border-blue-800 shadow-xl h-auto p-2">
           <Image src={hintt} width={100} height={100} objectFit="contain" />
           <h2 className="text-base mt-4 mx-4 text-black font-semibold text-center">
             {message}
-           
           </h2>
           <button
             className="my-5 w-auto px-8 h-10 bg-blue-600 text-white rounded-md shadow hover:shadow-lg font-semibold"

@@ -5,11 +5,12 @@ import{MdLockOutline} from 'react-icons/md';
 import { useState } from 'react'
 import Slider from '../components/Slider';
 
- function Home() {
+
+export default function Home() {
  return (
     <>
     <div className="flex min-h-screen flex-col items-center justify-center py-2 ">
-      {/*bg-no-repeat bg-cover bg-[url('https://image.shutterstock.com/image-illustration/8020-rule-concept-pareto-principle-260nw-1376683157.jpg')]"*/}
+      {/*bg-no-repeat bg-cover bg-[url('https://img.shutterstock.com/img-illustration/8020-rule-concept-pareto-principle-260nw-1376683157.jpg')]"*/}
       <Head>
         <title>80-20 Game</title>
         <link rel="icon" href="/favicon.ico" />
@@ -42,9 +43,9 @@ import Slider from '../components/Slider';
             
             <svg
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="h-6 w-6 text-gray-400"
@@ -76,7 +77,7 @@ import Slider from '../components/Slider';
           <h2 className="text-3xl font-bold mb-2">Hello, Player!</h2>
           <div className="border-2 w-10 border-white inline-block mb-2"></div>
           <p className="mb-10">Check out rules and regulations of the game.</p>
-          <a href="rules" className="border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-blue-800">Click Here</a>
+          <a href="Rules" className="border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-blue-800">Click Here</a>
         </div> 
         </div>
       </main>
@@ -85,4 +86,4 @@ import Slider from '../components/Slider';
   )
 }
 
-export default Home
+

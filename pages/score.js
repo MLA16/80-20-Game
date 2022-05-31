@@ -1,27 +1,20 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import useFirebaseRef from '../utils/useFirebaseRef'
+import FirebaseRef from '../utils/FirebaseRef'
 import { database as db } from '../firebase/firebase';
 import { ref, update } from 'firebase/database';
 import Image from "next/image";
 import Trophy from "../public/trophy.png";
 
-
-
-function scorePage() {
+function Score() {
     //let v=false;
-    const s = useFirebaseRef('Scores/score')
-
+    const s = FirebaseRef('Scores/score')
     const handleclick=()=>{
-        //v=true;
-        
-       
+        //v=true;     
         console.log(s)
         update(ref(db,'Scores/'),{
             score:0
-          })
-        
-          
+          })      
     }
     
     return (
@@ -48,4 +41,4 @@ function scorePage() {
     )
 }
 
-export default scorePage
+export default Score;

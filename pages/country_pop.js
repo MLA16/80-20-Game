@@ -1,29 +1,29 @@
 
-import Link from 'next/link'
+import Link from 'next/link';
 
 
-export default function popPage() {
+export default function PopulationPage() {
     return (
-		<div class=" flex-col items-center justify-center py-2 bg-no-repeat bg-cover bg-[url('https://www.churchhill.worcs.sch.uk/wp-content/uploads/2015/09/blue-abstract-background-1024x625.jpg')]">   
+		<div className=" flex-col items-center justify-center py-2 bg-no-repeat bg-cover bg-[url('https://www.churchhill.worcs.sch.uk/wp-content/uploads/2015/09/blue-abstract-background-1024x625.jpg')]">   
 
-<div class="flex justify-center">
-  <div class="flex flex-col col-span-4 md:flex-row md:max-w-2xl rounded-lg bg-white shadow-lg ">
-    <img class=" w-48 h-90 md:h-auto object-cover md:w-58 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://previews.123rf.com/images/hobbitfoot/hobbitfoot1703/hobbitfoot170300255/74952161-%EC%9D%B8%EB%8F%84-%EC%82%AC%EB%9E%8C%EB%93%A4%EC%9D%98-%ED%81%B0-%EA%B7%B8%EB%A3%B9%EC%A7%80%EB%8F%84-%EC%96%91%EC%8B%9D-%EC%9D%B8%EB%8F%84-%EB%98%90%EB%8A%94-%EC%9D%B8%EA%B5%AC-%ED%86%B5%EA%B3%84-%ED%85%9C%ED%94%8C%EB%A6%BF%EC%9D%98-%EC%9D%B8%EA%B5%AC-.jpg?fj=1" alt="" />
-    <div class="p-6 flex flex-col justify-start">
-      <h5 class="text-gray-900 text-xl font-medium mb-6">Indian Population</h5>
-      <p class="text-gray-700 text-base mb-8">
+<div className="flex justify-center">
+  <div className="flex flex-col col-span-4 md:flex-row md:max-w-2xl rounded-lg bg-white shadow-lg ">
+    <img className=" w-48 h-90 md:h-auto object-cover md:w-58 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://previews.123rf.com/images/hobbitfoot/hobbitfoot1703/hobbitfoot170300255/74952161-%EC%9D%B8%EB%8F%84-%EC%82%AC%EB%9E%8C%EB%93%A4%EC%9D%98-%ED%81%B0-%EA%B7%B8%EB%A3%B9%EC%A7%80%EB%8F%84-%EC%96%91%EC%8B%9D-%EC%9D%B8%EB%8F%84-%EB%98%90%EB%8A%94-%EC%9D%B8%EA%B5%AC-%ED%86%B5%EA%B3%84-%ED%85%9C%ED%94%8C%EB%A6%BF%EC%9D%98-%EC%9D%B8%EA%B5%AC-.jpg?fj=1" alt="" />
+    <div className="p-6 flex flex-col justify-start">
+      <h5 className="text-gray-900 text-xl font-medium mb-6">Indian Population</h5>
+      <p className="text-gray-700 text-base mb-8">
 	  1. The current population of India is 1,405,606,396 as of Tuesday, May 24, 2022, based on Worldometer elaboration of the latest United Nations data.
 <br></br>2. India 2020 population is estimated at 1,380,004,385 people at mid year according to UN data.
 <br></br>3. India population is equivalent to 17.7% of the total world population.
 <br></br>4. India ranks number 2 in the list of countries (and dependencies) by population.
 
       </p>
-      <p class="text-gray-600 text-xs">Last updated 3 mins ago</p>
+      <p className="text-gray-600 text-xs">Last updated 3 mins ago</p>
     </div>
   </div>
 </div>
-<h2 class="justify-center font-bold text-2xl text-center text-slate-900 my-10">Statewise Population</h2>      
-<div class="flex justify-center">
+<h2 className="justify-center font-bold text-2xl text-center text-slate-900 my-10">Statewise Population</h2>      
+<div className="flex justify-center">
 			 
                     <table className="table-fixed text-left w-full justify-between overflow-y: auto bg-gray-200 p-4 mx-16 h-24 text-justify ">
 		            <thead className="bg-black flex text-white w-150 overflow-y: auto ">
@@ -201,7 +201,7 @@ export default function popPage() {
     
 	</div>
    <Link href="/Round3">
-   <button class="bg-slate-700 hover:bg-slate-800 text-white font-bold py-2 px-8 border-b-4 border-slate-700 hover:border-slate-500 rounded mx-40 my-10">
+   <button className="bg-slate-700 hover:bg-slate-800 text-white font-bold py-2 px-8 border-b-4 border-slate-700 hover:border-slate-500 rounded mx-40 my-10">
    Proceed to Answer</button></Link>
 	
 				</div>

@@ -2,15 +2,14 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Slider from "../components/Slider";
 
-function rulesPage() {
+function RulesPage() {
     return (
         <>
        <Slider />
         </>
-
     )
 }
-export default rulesPage
+export default RulesPage
 
 
 
