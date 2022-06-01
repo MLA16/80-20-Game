@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { database as db } from '../firebase/firebase';
 import { ref, onValue } from 'firebase/database';
 
-function useFirebaseRef(path, once = false) {
+function FirebaseRef(path, once = false) {
 	const [value, setValue] = useState(null);
 	const [loading, setLoading] = useState(true);
 
@@ -24,4 +24,4 @@ function useFirebaseRef(path, once = false) {
 	return value;
 }
 
-export default useFirebaseRef;
+export default FirebaseRef;

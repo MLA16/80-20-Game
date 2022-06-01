@@ -73,8 +73,7 @@ export default function Slider() {
           onClick={handleOnNextClick}
         >
           <AiOutlineVerticalLeft size={30} />
-        </button>
-        
+        </button> 
       </div>
     </div>
   );
